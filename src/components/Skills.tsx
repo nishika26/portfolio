@@ -39,7 +39,7 @@ export default function Skills() {
     }}>
       <div style={{ marginBottom: 64 }}>
         <p style={{ color: "var(--accent)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 12 }}>
-          03 — Skills
+          Skills
         </p>
         <h2 style={{
           fontFamily: "var(--font-display)",
@@ -47,7 +47,7 @@ export default function Skills() {
           fontWeight: 400,
           lineHeight: 1.1,
         }}>
-          What I <em style={{ fontStyle: "italic", color: "var(--muted)" }}>know</em>
+          What I <em style={{ color: "var(--muted)" }}>know</em>
         </h2>
       </div>
 

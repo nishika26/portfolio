@@ -10,28 +10,33 @@ const projects = [
   {
     title: "Multi-Provider LLM Gateway",
     description: "Provider-agnostic LLM abstraction layer supporting OpenAI, AWS Bedrock, and Gemini. Built with FastAPI + SQLModel, hardened with SlowAPI rate limiting and SSRF-protected webhook callbacks.",
-    tags: ["FastAPI", "OpenAI", "AWS Bedrock", "Gemini", "Redis", "SlowAPI"],
-    href: "#",
+    tags: ["FastAPI", "OpenAI", "AWS ECS/EC2", "Gemini", "Redis", "PostgreSQL"],
+    href: "https://github.com/ProjectTech4DevAI/kaapi-backend",
   },
   {
-    title: "RAG Pipeline — Document Knowledge Base",
-    description: "Production PDF→Markdown→vector store pipeline with chunking, embedding, and concurrent uploads via Celery + gevent. Provisioned on AWS Bedrock + OpenSearch + S3 for NGO clients.",
-    tags: ["RAG", "Celery", "Redis", "OpenSearch", "S3", "AWS Bedrock"],
-    href: "#",
-  },
+  title: "Anemia Detection from Conjunctiva Images",
+  description: "Detected anemia from conjunctiva eye images using 5 models — CNN, XGBoost, Logistic Regression, VGG16, and ResNet50 (transfer learning). Best performer was logistic regression. Dataset sourced from Mendeley Data (Ghana conjunctiva images by Appiahene et al.).",
+  tags: ["CNN", "VGG16", "ResNet50", "XGBoost", "Transfer Learning", "Medical Imaging"],
+  href: "https://github.com/nishika26/Anemia_detection_using_medical_images",
+},
 ];
 
 const blogs = [
   {
     title: "Kaapi Guardrails: A Tattle-Tech4Dev Collaboration for AI Safety",
-    href: "https://projecttech4dev.org",
+    href: "https://projecttech4dev.org/kaapi-guardrails-tattle-tech4dev/",
     source: "projecttech4dev.org",
   },
   {
-    title: "AI Platform Building Steadily: Khopoli Sprint Reflections",
-    href: "https://projecttech4dev.org",
+    title: "Building a Chatbot for Public Policy Officials",
+    href: "https://projecttech4dev.org/crafting-tailored-prompts-building-a-chatbot-for-public-policy-officials/",
     source: "projecttech4dev.org",
   },
+  {
+    title: "Data at Work: Building a Data Pipeline for Jal Jeevan Mission",
+    href: "https://projecttech4dev.org/data-at-work-supporting-anurakshaks-in-water-management/",
+    source: "projecttech4dev.org",
+  }
 ];
 
 export default function Projects() {
@@ -42,15 +47,15 @@ export default function Projects() {
     }}>
       <div style={{ marginBottom: 64 }}>
         <p style={{ color: "var(--accent)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 12 }}>
-          04 — Projects & Writing
+          Projects & Writing
         </p>
         <h2 style={{
           fontFamily: "var(--font-display)",
-          fontSize: "clamp(32px, 5vw, 56px)",
+          fontSize: "clamp(24px, 3.5vw, 40px)",
           fontWeight: 400,
           lineHeight: 1.1,
         }}>
-          Things I've <em style={{ fontStyle: "italic", color: "var(--muted)" }}>built</em>
+          Things I've <em style={{ color: "var(--text)" }}>built</em>
         </h2>
       </div>
 
@@ -110,7 +115,7 @@ export default function Projects() {
 
       {/* Blogs */}
       <div>
-        <p style={{ color: "var(--muted)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 24 }}>Writing</p>
+        <p style={{ color: "var(--text)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 24 }}>Writing</p>
         {blogs.map((b, i) => (
           <a
             key={i}

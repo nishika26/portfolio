@@ -1,18 +1,20 @@
-import Nav from "@/components/Nav";
-import Summary from "@/components/Summary";
-import Work from "@/components/Work";
-import Skills from "@/components/Skills";
+import Masthead from "@/components/Masthead";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import SkillTree from "@/components/SkillTree";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
- 
+import Education from "@/components/Education"; 
+
 export default function Home() {
   return (
-    <main style={{ maxWidth: 1200, margin: "0 auto" }}>
-      <Nav />
-      <Summary />
-      <Work /> 
-      <Skills />
+    <main style={{ maxWidth: 1100, margin: "0 auto", minHeight: "100vh" }}>
+      <Masthead />
+      <About />
+      <Experience />
+      <SkillTree />
       <Projects />
+      <Education />
       <Contact />
     </main>
   );

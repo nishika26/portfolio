@@ -25,7 +25,7 @@ export default function Nav() {
       background: scrolled ? "rgba(10,10,10,0.92)" : "transparent",
       backdropFilter: scrolled ? "blur(12px)" : "none",
       transition: "all 0.3s ease",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-display)",
     }}>
       <span style={{ color: "var(--accent)", fontWeight: 500, fontSize: 13, letterSpacing: "0.05em" }}>
         NY

@@ -1,75 +1,63 @@
 "use client";
-
 export default function Contact() {
   return (
-    <section id="contact" style={{
-      padding: "100px 48px 80px",
-    }}>
-      <div style={{ marginBottom: 64 }}>
-        <p style={{ color: "var(--accent)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 12 }}>
-          05 — Contact
-        </p>
+    <section id="contact" style={{ borderBottom: "1px solid var(--rule)" }}>
+      <div style={{
+        padding: "16px 24px",
+        borderBottom: "1px solid var(--rule)",
+        display: "flex",
+        alignItems: "baseline",
+        gap: 16,
+      }}>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 700,  }}>
+          Contact
+        </h2>
       </div>
 
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 48,
-        alignItems: "end",
-        borderTop: "1px solid var(--border)",
-        paddingTop: 64,
-      }}>
-        <div>
-          <h2 style={{
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+        {/* left */}
+        <div style={{ padding: "40px 24px", borderRight: "1px solid var(--rule)" }}>
+          <p style={{
             fontFamily: "var(--font-display)",
-            fontSize: "clamp(40px, 7vw, 88px)",
-            fontWeight: 400,
+            fontSize: "clamp(24px, 3vw, 40px)",
+            fontWeight: 900,
             lineHeight: 1,
-            marginBottom: 24,
+            marginBottom: 20,
           }}>
-            Let's<br />
-            <em style={{ fontStyle: "italic", color: "var(--muted)" }}>talk.</em>
-          </h2>
-          <p style={{ color: "var(--muted)", fontSize: 13, maxWidth: 380, lineHeight: 1.8 }}>
-            Open to Backend & AI Engineering roles at AI-first companies.
-            Also happy to talk about LLMs, RAG, fine-tuning, or anything in between.
           </p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        {/* right */}
+        <div style={{ padding: "40px 28px" }}>
           {[
             { label: "Email", value: "nishikayadav26@gmail.com", href: "mailto:nishikayadav26@gmail.com" },
             { label: "LinkedIn", value: "linkedin.com/in/nishika-yadav", href: "https://linkedin.com/in/nishika-yadav" },
             { label: "GitHub", value: "github.com/nishika26", href: "https://github.com/nishika26" },
-            { label: "HuggingFace", value: "huggingface.co/Nishika26", href: "https://huggingface.co/Nishika26" },
             { label: "Phone", value: "+91-8840139142", href: "tel:+918840139142" },
           ].map((item, i) => (
             <a
               key={i}
               href={item.href}
-              target={item.href.startsWith("mailto") || item.href.startsWith("tel") ? "_self" : "_blank"}
+              target={item.href.startsWith("http") ? "_blank" : "_self"}
               rel="noopener noreferrer"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "center",
                 padding: "14px 0",
-                borderBottom: "1px solid var(--border)",
-                transition: "all 0.2s",
+                borderBottom: "1px solid var(--rule)",
+                fontFamily: "var(--font-body)",
+                fontSize: 15,
+                color: "var(--ink)",
+                textDecoration: "none",
+                transition: "color 0.15s",
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.paddingLeft = "8px";
-                e.currentTarget.style.color = "var(--accent)";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.paddingLeft = "0";
-                e.currentTarget.style.color = "var(--text)";
-              }}
+              onMouseEnter={e => (e.currentTarget.style.color = "var(--green)")}
+              onMouseLeave={e => (e.currentTarget.style.color = "var(--ink)")}
             >
-              <span style={{ color: "var(--muted)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", minWidth: 100 }}>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-light)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                 {item.label}
               </span>
-              <span style={{ fontSize: 13 }}>{item.value} ↗</span>
+              <span>{item.value} ↗</span>
             </a>
           ))}
         </div>
@@ -77,16 +65,15 @@ export default function Contact() {
 
       {/* footer */}
       <div style={{
-        marginTop: 100,
-        paddingTop: 24,
-        borderTop: "1px solid var(--border)",
+        padding: "16px 24px",
+        borderTop: "1px solid var(--rule)",
         display: "flex",
         justifyContent: "space-between",
-        color: "var(--muted)",
+        fontFamily: "var(--font-mono)",
         fontSize: 11,
-        letterSpacing: "0.08em",
+        color: "var(--ink-light)",
       }}>
-        <span>© 2025 Nishika Yadav</span>
+        <span>© 2026 Nishika Yadav</span>
         <span>Built with Next.js · Deployed on Vercel</span>
       </div>
     </section>
