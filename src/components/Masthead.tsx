@@ -51,7 +51,7 @@ export default function Masthead() {
           { label: "Education", href: "#education", color: "var(--ink)" },
           { label: "Resume ↓", href: "/Nishika_Resume.pdf", color: "var(--green)" },
           { label: "GitHub ↗", href: "https://github.com/nishika26", color: "var(--ink-light)" },
-          { label: "LinkedIn ↗", href: "https://linkedin.com/in/nishika-yadav", color: "var(--ink-light)" },
+          { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/nishika-yadav-9b15111b9/", color: "var(--ink-light)" },
           { label: "HuggingFace ↗", href: "https://huggingface.co/Nishika26", color: "var(--ink-light)" },
           { label: "Leetcode ↗", href: "https://leetcode.com/u/nishikayadav26/", color: "var(--ink-light)" },
         ].map((item, i, arr) => (

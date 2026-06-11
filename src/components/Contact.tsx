@@ -31,7 +31,7 @@ export default function Contact() {
         <div style={{ padding: "40px 28px" }}>
           {[
             { label: "Email", value: "nishikayadav26@gmail.com", href: "mailto:nishikayadav26@gmail.com" },
-            { label: "LinkedIn", value: "linkedin.com/in/nishika-yadav", href: "https://linkedin.com/in/nishika-yadav" },
+            { label: "LinkedIn", value: "linkedin.com/in/nishika-yadav", href: "https://www.linkedin.com/in/nishika-yadav-9b15111b9/" },
             { label: "GitHub", value: "github.com/nishika26", href: "https://github.com/nishika26" },
             { label: "Phone", value: "+91-8840139142", href: "tel:+918840139142" },
           ].map((item, i) => (
