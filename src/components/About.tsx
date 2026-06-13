@@ -31,7 +31,7 @@ export default function About() {
               lineHeight: 1.8,
             }}
           >
-            Hi, I am a Backend & AI Engineer with 1.5+ years building
+            Hi, I am a Backend & AI Engineer with 2+ years building
             production LLM platforms, multi-provider orchestration, RAG
             pipelines, vector stores, and fine-tuning models. Python is my
             primary language, and I bring experience in data science, machine
